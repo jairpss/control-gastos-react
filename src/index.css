@@ -397,12 +397,14 @@ body .modal {
     background-color: var(--azul);
     color: var(--blanco);
     margin-bottom: 2rem;
+    border-radius: 1rem 0 0 1rem;
 }
 
 .swipe-action__trailing {
     background-color: #db2777;
     margin-bottom: 2rem;
     color: var(--blanco);
+    border-radius: 0 1rem 1rem 0;
 }
 
 .swipeable-list .swipe-action {
