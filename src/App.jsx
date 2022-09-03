@@ -4,7 +4,7 @@ import Filtros from './components/Filtros'
 import ListadoGastos from './components/ListadoGastos'
 import Modal from './components/Modal'
 import { generarId } from './helpers'
-import IconoAdd from './img/nuevo-gasto.svg'
+import IconoAdd from './img/plus.svg'
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     localStorage.getItem('gastos') ? JSON.parse(localStorage.getItem('gastos')) : []
   )
   const [presupuesto, setPresupuesto] = useState( 
-    Number(localStorage.getItem('presupuesto')) ?? ''
+    Number(localStorage.getItem('presupuesto')) ?? 0
   )
   const [isValidPresupuesto, setIsValidPresupuesto] = useState(false)
   const [modal, setModal] = useState(false)
@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     const presupuestoLS = Number(localStorage.getItem('presupuesto')) ?? 0
-    if(presupuestoLS > 0) {
+    if(presupuestoLS < 0) {
       setIsValidPresupuesto(true)
     }
   }, [])
@@ -115,11 +115,11 @@ function App() {
                 />
             </main>
             <div className="nuevo-gasto">
-                <img
-                  src={IconoAdd}
-                  alt="Icono nuevo gasto"
+                <button
                   onClick={handleNuevoGasto}
-                />
+                >
+                  Nuevo gasto  <img src={IconoAdd}/>
+                </button>
             </div>
         </>
           

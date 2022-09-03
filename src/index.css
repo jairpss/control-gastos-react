@@ -1,11 +1,10 @@
 :root {
-    --bg:  linear-gradient(to right, #2472fc, #8711c1); 
-    --azul: #2472fc;
+    --azul: #5741DE;
     --blanco: #ffffff;
     --gris-claro: #f5f5f5;
     --gris: #94a3b8;
     --gris-oscuro: #64748b;
-    --negro: rgb(16, 16, 17);
+    --negro: rgb(26, 26, 29);
     --red: #f5476c;
 }
 
@@ -50,7 +49,7 @@ h2 {
 }
 
 header {
-    background: var(--bg);
+    background: var(--azul);
 }
 
 header h1 {
@@ -73,13 +72,13 @@ header h1 {
 }
 .formulario legend {
     font-size: 3.6rem;
+    font-weight: 700;
     text-align: center;
     display: block;
-    text-transform: uppercase;
     color: var(--blanco);
     margin-bottom: 4rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--azul);
+    border-bottom: 5px solid var(--azul);
 }
 .formulario .campo {
     display: grid;
@@ -133,7 +132,7 @@ input[type=number]::-webkit-inner-spin-button {
     }
 }
 .formulario input[type="submit"]:hover {
-    background-color: #4d3adc;
+    background-color: #6652e8;
     cursor: pointer;
 }
 
@@ -146,6 +145,8 @@ input[type=number]::-webkit-inner-spin-button {
     background-color: var(--gris-claro);
     font-family: "Manrope", sans-serif;
     font-size: 1.6rem;
+    color: var(--gris-oscuro);
+    font-weight: 700;
 }
 
 .alerta {
@@ -206,6 +207,9 @@ input[type=number]::-webkit-inner-spin-button {
     font-family: "Manrope", sans-serif;
 }
 
+::placeholder {
+    color: #b5b5b7;
+  }
 .contenedor-presupuesto svg {
     width: 25rem;
 }
@@ -270,9 +274,13 @@ main {
     flex: 1;
     padding: 1rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: .5rem;
     text-align: center;
     background-color: var(--gris-claro);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.6rem;
+    color: var(--gris-oscuro);
+    font-weight: 700;
 }
 
 .listado-gastos {
@@ -281,6 +289,7 @@ main {
 .listado-gastos h2 {
     color: var(--gris-oscuro);
     font-weight: 900;
+    margin-bottom: 2rem;
 }
 .no-gastos {
     text-align: center;
@@ -297,7 +306,7 @@ main {
 }
 
 .cantidad-gasto {
-    font-size: 2.4rem;
+    font-size: 3rem;
     color: var(--negro);
     font-weight: 900;
 }
@@ -347,16 +356,33 @@ main {
     right: 5rem;
 }
 
-.nuevo-gasto img {
-    width: 5rem;
+.nuevo-gasto button {
+    border: none;
+    background-color: #23DD83;
+    padding: 1rem 2rem;
+    /* width: 100%; */
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 300ms;
 }
-.nuevo-gasto img:hover {
+.nuevo-gasto button:hover {
     cursor: pointer;
+    background-color: #2ce98e;
 }
+
 
 .modal {
     position: absolute;
-    background-color: rgb(0 0 0 / 0.92);
+    background-color: rgba(20, 21, 21, 0.9);
+    backdrop-filter: blur(8px);
     top: 0;
     left: 0;
     right: 0;
@@ -371,6 +397,10 @@ main {
 }
 .modal .cerrar-modal img {
     width: 100%;
+}
+
+.modal .cerrar-modal img:hover {
+    cursor: pointer
 }
 
 .modal .formulario {
