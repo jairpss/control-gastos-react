@@ -64,6 +64,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
                     placeholder="Nombre del gasto"
                     value={nombre}
                     onChange={e => setNombre(e.target.value)}
+                    className="input-modal"
                 />
             </div>
 
@@ -75,6 +76,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
                     placeholder="Añade la cantidad del gasto"
                     value={cantidad}
                     onChange={e => setCantidad(Number(e.target.value))}
+                    className="input-modal"
                 />
             </div>
 
@@ -84,6 +86,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
                     id="categoria"
                     value={categoria}
                     onChange={e => setCategoria(e.target.value)}
+                    className="input-modal"
                 >
                     <option value="">--Selecciona--</option>
                     <option value="ahorro">Ahorro</option>

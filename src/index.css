@@ -17,6 +17,8 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 *,
@@ -129,6 +131,7 @@ input[type=number]::-webkit-inner-spin-button {
     .formulario input[type="submit"] {
         display: block;
         padding: 1rem 5rem;
+        width: 100%;
     }
 }
 .formulario input[type="submit"]:hover {
@@ -164,8 +167,8 @@ input[type=number]::-webkit-inner-spin-button {
     color: var(--blanco);
     /* border-radius: 1rem; */
 }
-.alerta.success {
-}
+/* .alerta.success {
+} */
 
 .contenedor {
     width: 90%;
@@ -228,6 +231,9 @@ input[type=number]::-webkit-inner-spin-button {
         text-align: left;
     }
 }
+
+
+
 .contenido-presupuesto p.negativo,
 .contenido-presupuesto p.negativo span {
     color: var(--red);
@@ -459,3 +465,101 @@ body .modal {
     font-size: 2.4rem;
     text-align: right;
 }
+
+@media (max-width:570px) {
+    .filtros-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .filtros-flex select{
+        width: 100%;
+    }
+}
+
+@media (max-width: 515px) {
+    .formulario input[type="text"].nuevo-presupuesto, 
+    .formulario input[type="number"].nuevo-presupuesto {
+        width: 100%;
+        text-align: center;
+        font-family: "Manrope", sans-serif;
+    }
+
+    .formulario label {
+        font-size: 2.2rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .contenido-presupuesto p {
+        font-size: 2.2rem;
+    }
+
+    .contenido-gasto img {
+        width: 7rem;
+    }
+
+    .descripcion-gasto .nombre-gasto {
+        font-size: 2.2rem;
+    }
+
+    .descripcion-gasto .fecha-gasto {
+        font-size: 1.5rem;
+    }
+
+    .cantidad-gasto {
+        font-size: 2.5rem;
+    }
+
+    
+
+}
+
+@media (max-width: 450px) {
+    .formulario legend {
+        font-size: 3.2rem;
+    }
+
+    .formulario .campo {
+        margin-left: 10px;
+    }
+
+    .input-modal{
+        width: 90%;
+    }
+    .formulario input[type="submit"] {
+        width: 90%;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 395px) {
+    .contenido-presupuesto p {
+        font-size: 2rem;
+    }
+
+    .contenido-gasto img {
+        width: 5rem;
+    }
+    .gasto {
+        flex-direction: column;
+    }
+
+    .cantidad-gasto {
+        font-size: 3rem;
+    }
+
+    .formulario legend {
+        font-size: 3.2rem;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .input-modal{
+        width: 80%;
+    }
+    .formulario input[type="submit"] {
+        width: 80%;
+        margin-left: 10px;
+    }
+}
+
